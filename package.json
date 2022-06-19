@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Parcel-Track#readme",
   "devDependencies": {
+    "@barktler/driver-axios": "^4.0.0",
+    "@barktler/mixin-debug-log": "^1.1.0",
     "@sudoo/triforce": "^3.7.0"
   },
   "nyc": {
