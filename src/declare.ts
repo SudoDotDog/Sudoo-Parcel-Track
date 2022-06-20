@@ -14,7 +14,7 @@ export interface IParcelTrackCourier {
     trackSingle(trackingNumber: string): Promise<ParcelTrackResult>;
 }
 
-export enum CARRIER {
+export enum COURIER {
 
     USPS = 'USPS',
     UPS = 'UPS',
@@ -22,3 +22,9 @@ export enum CARRIER {
 
     UNKNOWN = 'UNKNOWN',
 }
+
+export type GlobalClassificationResult = {
+
+    readonly trackingNumber: string;
+    readonly carrier: COURIER;
+};
