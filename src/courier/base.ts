@@ -4,9 +4,9 @@
  * @description Base
  */
 
-import { ParcelTrackResult } from "../declare";
+import { IParcelTrackCourier, ParcelTrackResult } from "../declare";
 
-export abstract class ParcelTrackCourierBase {
+export abstract class ParcelTrackCourierBase implements IParcelTrackCourier {
 
     public abstract getExternalURL(trackingNumber: string): string;
 

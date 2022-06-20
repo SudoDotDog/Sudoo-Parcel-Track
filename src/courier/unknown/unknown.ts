@@ -1,21 +1,16 @@
 /**
  * @author WMXPY
- * @namespace ParcelTrack_Courier_Fedex
- * @description Fedex
+ * @namespace ParcelTrack_Courier_Unknown
+ * @description Unknown
  */
 
 import { ParcelTrackResult } from "../../declare";
 import { ParcelTrackCourierBase } from "../base";
 
-export class ParcelTrackCourierFedex extends ParcelTrackCourierBase {
-
+export class ParcelTrackCourierUnknown extends ParcelTrackCourierBase {
 
     public getExternalURL(trackingNumber: string): string {
-
-        return [
-            'https://www.fedex.com/apps/fedextrack/?tracknumber=',
-            trackingNumber,
-        ].join('');
+        throw new Error('Method not implemented.');
     }
 
     public trackSingle(_trackingNumber: string): Promise<ParcelTrackResult> {

@@ -4,6 +4,15 @@
  * @description Declare
  */
 
+export type ParcelTrackResult = {
+};
+
+export interface IParcelTrackCourier {
+
+    getExternalURL(trackingNumber: string): string;
+
+    trackSingle(trackingNumber: string): Promise<ParcelTrackResult>;
+}
 
 export enum CARRIER {
 
@@ -13,6 +22,3 @@ export enum CARRIER {
 
     UNKNOWN = 'UNKNOWN',
 }
-
-export type ParcelTrackResult = {
-};
