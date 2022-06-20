@@ -9,7 +9,8 @@ import { ParcelTrackCourierBase } from "../../parcel-track/base";
 
 export class ParcelTrackCourierUnknown extends ParcelTrackCourierBase {
 
-    public getExternalURL(trackingNumber: string): string {
+    public getExternalURL(_trackingNumber: string): string {
+
         throw new Error('Method not implemented.');
     }
 

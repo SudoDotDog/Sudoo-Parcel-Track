@@ -33,7 +33,7 @@ export const globalClassification = (data: string): GlobalClassificationResult[]
 
         return {
             trackingNumber: value,
-            courier: courier,
+            courier,
         };
     });
 
