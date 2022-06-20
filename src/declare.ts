@@ -26,5 +26,5 @@ export enum COURIER {
 export type GlobalClassificationResult = {
 
     readonly trackingNumber: string;
-    readonly carrier: COURIER;
+    readonly courier: COURIER;
 };

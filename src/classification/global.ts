@@ -5,8 +5,8 @@
  */
 
 import { COURIER, GlobalClassificationResult } from "../declare";
-import { fixLocalClassificationRegExp } from "../util/classification";
-import { courierClassificationList, createGlobalClassificationRegExp } from "./classification";
+import { createGlobalClassificationRegExp } from "./classification";
+import { localClassification } from "./local";
 
 export const globalClassification = (data: string): GlobalClassificationResult[] => {
 
@@ -29,22 +29,11 @@ export const globalClassification = (data: string): GlobalClassificationResult[]
 
     const mappedResult: GlobalClassificationResult[] = result.map((value: string): GlobalClassificationResult => {
 
-        for (const courier of courierClassificationList) {
-
-            const regExp: RegExp = fixLocalClassificationRegExp(courier.pattern);
-
-            if (regExp.test(value)) {
-
-                return {
-                    trackingNumber: value,
-                    carrier: courier.courier,
-                };
-            }
-        }
+        const courier: COURIER = localClassification(value);
 
         return {
             trackingNumber: value,
-            carrier: COURIER.UNKNOWN,
+            courier: courier,
         };
     });
 
