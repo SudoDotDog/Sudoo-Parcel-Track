@@ -1,7 +1,7 @@
 /**
  * @author WMXPY
  * @namespace ParcelTrack_Courier_Fedex
- * @description Fedex
+ * @description Parcel Track
  */
 
 import { ParcelTrackResult } from "../../declare";
