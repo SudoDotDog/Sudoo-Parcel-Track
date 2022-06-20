@@ -5,7 +5,7 @@
  */
 
 import { ParcelTrackResult } from "../../declare";
-import { ParcelTrackCourierBase } from "../base";
+import { ParcelTrackCourierBase } from "../../parcel-track/base";
 
 export class ParcelTrackCourierFedex extends ParcelTrackCourierBase {
 

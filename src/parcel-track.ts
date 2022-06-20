@@ -4,10 +4,10 @@
  * @description Parcel Track
  */
 
-import { ParcelTrackCourierFedex } from "./courier/fedex/fedex";
-import { ParcelTrackCourierUnknown } from "./courier/unknown/unknown";
-import { ParcelTrackCourierUPS } from "./courier/ups/ups";
-import { ParcelTrackCourierUSPS } from "./courier/usps/usps";
+import { ParcelTrackCourierFedex } from "./courier/fedex/parcel-track";
+import { ParcelTrackCourierUnknown } from "./courier/unknown/parcel-track";
+import { ParcelTrackCourierUPS } from "./courier/ups/parcel-track";
+import { ParcelTrackCourierUSPS } from "./courier/usps/parcel-track";
 import { CARRIER, IParcelTrackCourier } from "./declare";
 
 export class ParcelTrack {

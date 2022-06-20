@@ -1,7 +1,7 @@
 /**
  * @author WMXPY
- * @namespace ParcelTrack_Courier
- * @description Base
+ * @namespace ParcelTrack_ParcelTrack
+ * @description Parcel Track Base
  */
 
 import { IParcelTrackCourier, ParcelTrackResult } from "../declare";

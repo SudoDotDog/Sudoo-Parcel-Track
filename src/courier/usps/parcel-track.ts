@@ -1,11 +1,11 @@
 /**
  * @author WMXPY
  * @namespace ParcelTrack_Courier_USPS
- * @description USPS
+ * @description Parcel Track
  */
 
 import { ParcelTrackResult } from "../../declare";
-import { ParcelTrackCourierBase } from "../base";
+import { ParcelTrackCourierBase } from "../../parcel-track/base";
 
 export class ParcelTrackCourierUSPS extends ParcelTrackCourierBase {
 
