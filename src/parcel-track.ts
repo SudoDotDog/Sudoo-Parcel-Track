@@ -6,6 +6,8 @@
 
 import { ParcelTrackCourierFedex } from "./courier/fedex/fedex";
 import { ParcelTrackCourierUnknown } from "./courier/unknown/unknown";
+import { ParcelTrackCourierUPS } from "./courier/ups/ups";
+import { ParcelTrackCourierUSPS } from "./courier/usps/usps";
 import { CARRIER, IParcelTrackCourier } from "./declare";
 
 export class ParcelTrack {
