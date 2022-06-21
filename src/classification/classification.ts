@@ -8,12 +8,12 @@ import { fedexClassificationPattern } from "../courier/fedex/classification";
 import { upsClassificationPattern } from "../courier/ups/classification";
 import { uspsClassificationPattern } from "../courier/usps/classification";
 import { COURIER } from "../declare";
-import { fixLocalClassificationRegExp } from "../util/classification";
+import { fixGlobalClassificationRegExp } from "../util/classification";
 import { ClassificationCourier } from "./declare";
 
 export const createGlobalClassificationRegExp = (): RegExp => {
 
-    return fixLocalClassificationRegExp([
+    return fixGlobalClassificationRegExp([
         ...uspsClassificationPattern,
         ...upsClassificationPattern,
         ...fedexClassificationPattern,
