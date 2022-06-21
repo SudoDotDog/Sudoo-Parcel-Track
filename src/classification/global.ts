@@ -4,11 +4,11 @@
  * @description Global
  */
 
-import { COURIER, GlobalClassificationResult } from "../declare";
+import { COURIER, GlobalClassificationElement, GlobalClassificationResult } from "../declare";
 import { createGlobalClassificationRegExp } from "./classification";
 import { localClassification } from "./local";
 
-export const globalClassification = (data: string): GlobalClassificationResult[] => {
+export const globalClassification = (data: string): GlobalClassificationResult => {
 
     const regExp: RegExp = createGlobalClassificationRegExp();
     let temp;
@@ -27,7 +27,7 @@ export const globalClassification = (data: string): GlobalClassificationResult[]
         result.push(trimmed);
     }
 
-    const mappedResult: GlobalClassificationResult[] = result.map((value: string): GlobalClassificationResult => {
+    const mappedResult: GlobalClassificationElement[] = result.map((value: string): GlobalClassificationElement => {
 
         const courier: COURIER = localClassification(value);
 
@@ -37,5 +37,14 @@ export const globalClassification = (data: string): GlobalClassificationResult[]
         };
     });
 
-    return mappedResult;
+    if (mappedResult.length === 0) {
+        return {
+            hasMatch: false,
+        };
+    }
+
+    return {
+        hasMatch: true,
+        matches: mappedResult,
+    };
 };

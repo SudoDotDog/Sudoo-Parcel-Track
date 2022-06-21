@@ -20,9 +20,9 @@ export class ParcelTrack {
         return courier;
     }
 
-    public static globalClassify(data: string): GlobalClassificationResult[] {
+    public static globalClassify(data: string): GlobalClassificationResult {
 
-        const result: GlobalClassificationResult[] = globalClassification(data);
+        const result: GlobalClassificationResult = globalClassification(data);
         return result;
     }
 

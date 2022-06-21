@@ -24,8 +24,17 @@ export enum COURIER {
     UNKNOWN = 'UNKNOWN',
 }
 
-export type GlobalClassificationResult = {
+export type GlobalClassificationElement = {
 
     readonly trackingNumber: string;
     readonly courier: COURIER;
+};
+
+export type GlobalClassificationResult = {
+
+    readonly hasMatch: true;
+    readonly matches: GlobalClassificationElement[];
+} | {
+
+    readonly hasMatch: false;
 };
